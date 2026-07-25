@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Raytona 500 — Team  City Race</title>
+<title>Raytona 500 — Team Garden City Race</title>
 <style>
   :root{
     --asphalt:#0b0d12; --panel:#171b23; --rail:#2b2f3a;
@@ -176,7 +176,7 @@
 <div class="page">
 
   <header>
-    <div class="ribbon">TEAM G CITY</div>
+    <div class="ribbon">TEAM GARDEN CITY</div>
     <div class="brand">RAYMOUR &amp; FLANIGAN <span>FURNITURE | MATTRESSES</span></div>
     <h1>RAYTONA<span class="num"> 500</span></h1>
     <div class="flagline"><span class="flag"></span><span class="tag">The Great Mattress Race</span><span class="flag"></span></div>
@@ -254,33 +254,33 @@
    2. Replace each driver's "bedding" (and "sweep") with that week's numbers.
    Keep the same colors so cars stay recognizable week to week.
    ========================================================================= */
-const WEEK_NUMBER = 3;
+const WEEK_NUMBER = 4;
 
 const drivers = [
-  { name:"Szuyuan Chang", code:"SC2C", bedding:82651.12, sweep:"1 Entry Earned", bar:"BAR II", color:"#ce2121" },
-  { name:"Anthony Palazzo", code:"AP3", bedding:42810.54, sweep:"1 Entry Earned", bar:"BAR I", color:"#2cdc5f" },
-  { name:"Pamela Walker", code:"PW9", bedding:41462.34, sweep:"$3,999.00", bar:null, color:"#9e42e0" },
-  { name:"Frank Land", code:"FJL2", bedding:37542.1, sweep:null, bar:null, color:"#ceb821" },
-  { name:"Stephan Marius", code:"SM2E", bedding:34350.33, sweep:null, bar:null, color:"#2cbfdc" },
-  { name:"Michelle Napoli", code:"MLN1", bedding:33372.07, sweep:null, bar:null, color:"#e04297" },
-  { name:"Abdul Rehman", code:"NNA2", bedding:30512.8, sweep:null, bar:null, color:"#4cce21" },
-  { name:"Nick Yaraghchi", code:"NY3", bedding:29028.11, sweep:"$3,899.00", bar:null, color:"#332cdc" },
-  { name:"Sharon Praylow", code:"SP17", bedding:27449.73, sweep:"$1,949.50", bar:null, color:"#e07742" },
-  { name:"Fatma Dhirani", code:"FMD2", bedding:25634.05, sweep:null, bar:null, color:"#21ce8d" },
-  { name:"Saahir Pasha", code:"SKP1", bedding:21525.01, sweep:null, bar:null, color:"#ce2cdc" },
-  { name:"Linda Salerno", code:"LS1", bedding:21286.42, sweep:null, bar:null, color:"#bfe042" },
-  { name:"Ariel Torres", code:"AGT1", bedding:20813.12, sweep:"$1,949.50", bar:null, color:"#2177ce" },
-  { name:"Shakeela Said", code:"SS2S", bedding:20457.78, sweep:null, bar:null, color:"#dc2c50" },
-  { name:"Jing Li", code:"JL1Q", bedding:18165.93, sweep:null, bar:null, color:"#42e04f" },
-  { name:"Erick Hall", code:"EAH6", bedding:17568.5, sweep:null, bar:null, color:"#6221ce" },
-  { name:"Jason Mantia", code:"JAM1O", bedding:16254.86, sweep:"$5,813.00", bar:null, color:"#dca22c" },
-  { name:"Lincoln Griffith", code:"LGE", bedding:14694.18, sweep:"$1,614.50", bar:null, color:"#42e0da" },
-  { name:"Faith Wyckoff", code:"FW5", bedding:13793.81, sweep:"$2,899.00", bar:null, color:"#ce21a2" },
-  { name:"Karen Budhan-Ali", code:"KSB2", bedding:11257.74, sweep:null, bar:null, color:"#7cdc2c" },
-  { name:"Joseph Moscon", code:"JM2H", bedding:10982.23, sweep:null, bar:null, color:"#425ce0" },
-  { name:"Francisco Saavedra", code:"FXS", bedding:9881.12, sweep:null, bar:null, color:"#ce3721" },
-  { name:"Imam Kazmi", code:"IK1", bedding:7715.19, sweep:"$3,199.00", bar:null, color:"#2cdc76" },
-  { name:"Diogenes Barzola", code:"DJB9", bedding:6382.33, sweep:null, bar:null, color:"#b242e0" },
+  { name:"Szuyuan Chang", code:"SC2C", bedding:93988.59, sweep:"1 Entry Earned", bar:"BAR III", color:"#ce2121" },
+  { name:"Pamela Walker", code:"PW9", bedding:52604.98, sweep:"$3,999.00", bar:"BAR I", color:"#9e42e0" },
+  { name:"Anthony Palazzo", code:"AP3", bedding:52075.23, sweep:"1 Entry Earned", bar:"BAR I", color:"#2cdc5f" },
+  { name:"Frank Land", code:"FJL2", bedding:39581.15, sweep:null, bar:null, color:"#ceb821" },
+  { name:"Stephan Marius", code:"SM2E", bedding:37958.33, sweep:"$4,099.00", bar:null, color:"#2cbfdc" },
+  { name:"Abdul Rehman", code:"NNA2", bedding:35969.3, sweep:null, bar:null, color:"#4cce21" },
+  { name:"Michelle Napoli", code:"MLN1", bedding:33622.06, sweep:null, bar:null, color:"#e04297" },
+  { name:"Nick Yaraghchi", code:"NY3", bedding:31281.56, sweep:"$3,899.00", bar:null, color:"#332cdc" },
+  { name:"Sharon Praylow", code:"SP17", bedding:30949.63, sweep:"$5,948.50", bar:null, color:"#e07742" },
+  { name:"Fatma Dhirani", code:"FMD2", bedding:30751.68, sweep:null, bar:null, color:"#21ce8d" },
+  { name:"Saahir Pasha", code:"SKP1", bedding:28499.25, sweep:null, bar:null, color:"#ce2cdc" },
+  { name:"Linda Salerno", code:"LS1", bedding:28019.59, sweep:null, bar:null, color:"#bfe042" },
+  { name:"Shakeela Said", code:"SS2S", bedding:25085.51, sweep:null, bar:null, color:"#dc2c50" },
+  { name:"Erick Hall", code:"EAH6", bedding:24881.55, sweep:null, bar:null, color:"#6221ce" },
+  { name:"Ariel Torres", code:"AGT1", bedding:21891.58, sweep:"$1,949.50", bar:null, color:"#2177ce" },
+  { name:"Jing Li", code:"JL1Q", bedding:18401.47, sweep:null, bar:null, color:"#42e04f" },
+  { name:"Jason Mantia", code:"JAM1O", bedding:17096.41, sweep:"$5,813.00", bar:null, color:"#dca22c" },
+  { name:"Lincoln Griffith", code:"LGE", bedding:16825.63, sweep:"$1,614.50", bar:null, color:"#42e0da" },
+  { name:"Faith Wyckoff", code:"FW5", bedding:16806.75, sweep:"$2,899.00", bar:null, color:"#ce21a2" },
+  { name:"Karen Budhan-Ali", code:"KSB2", bedding:11817.74, sweep:null, bar:null, color:"#7cdc2c" },
+  { name:"Joseph Moscon", code:"JM2H", bedding:11781.23, sweep:null, bar:null, color:"#425ce0" },
+  { name:"Francisco Saavedra", code:"FXS", bedding:10580.12, sweep:null, bar:null, color:"#ce3721" },
+  { name:"Imam Kazmi", code:"IK1", bedding:8625.19, sweep:"$3,199.00", bar:null, color:"#2cdc76" },
+  { name:"Diogenes Barzola", code:"DJB9", bedding:8076.95, sweep:null, bar:null, color:"#b242e0" },
   { name:"Michael Farrier", code:"MPF4", bedding:2969.8, sweep:null, bar:null, color:"#cdce21" },
   { name:"Keith Lebowitz", code:"KSL1", bedding:1615.6, sweep:null, bar:null, color:"#2ca8dc" },
   { name:"Harvey Lisman", code:"HJL2", bedding:1351.29, sweep:null, bar:null, color:"#e04283" },
