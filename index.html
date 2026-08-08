@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Raytona 500 — Team Garden City Race</title>
+<title>Raytona 500 — Team Metro Race</title>
 <style>
   :root{
     --asphalt:#0b0d12; --panel:#171b23; --rail:#2b2f3a;
-    --red:#8440d8; --red-dk:#542693; --gold:#e8b23d;
+    --red:#d81f26; --red-dk:#8f1418; --gold:#e8b23d;
     --white:#f4f2ee; --gray:#9a9ca8; --gray-dim:#5c5f6b;
   }
   *{box-sizing:border-box;}
@@ -18,10 +18,10 @@
 
   header{position:relative;text-align:center;padding:16px 0 22px;margin-bottom:22px;overflow:hidden;}
   header::before{content:"";position:absolute;inset:0;pointer-events:none;
-    background:radial-gradient(ellipse 60% 70% at 50% 30%, rgba(132,64,216,0.12), transparent 70%);}
+    background:radial-gradient(ellipse 60% 70% at 50% 30%, rgba(216,31,38,0.12), transparent 70%);}
   header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:8px;
     background:repeating-linear-gradient(90deg,#f4f2ee 0 10px,#15161a 10px 20px);opacity:0.85;}
-  h1 .num{color:var(--red);background:linear-gradient(180deg,#b98cf5,var(--red) 60%,#4a1f85);
+  h1 .num{color:var(--red);background:linear-gradient(180deg,#ff5a60,var(--red) 60%,#9c161b);
     -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
   .flagline{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:8px;}
   .flagline .flag{width:26px;height:14px;background:
@@ -33,13 +33,13 @@
   .ribbon{position:absolute;top:8px;left:-6px;background:var(--red);color:var(--white);font-weight:800;font-style:italic;
     font-size:13px;letter-spacing:1px;padding:8px 26px 8px 16px;clip-path:polygon(0 0,100% 0,88% 100%,0% 100%);}
   h1{font-size:52px;line-height:1;margin:8px 0 2px;font-weight:900;letter-spacing:1px;text-transform:uppercase;
-     text-shadow:0 0 30px rgba(132,64,216,.35);}
+     text-shadow:0 0 30px rgba(216,31,38,.35);}
   h1 .num{color:var(--red);}
   .meta{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;margin-top:14px;font-size:11px;color:var(--gray);text-transform:uppercase;letter-spacing:1px;}
   .meta strong{color:var(--white);}
 
   .controls{display:flex;justify-content:center;align-items:center;gap:14px;margin-bottom:16px;}
-  button.raceBtn{background:linear-gradient(180deg,#9a5ce8,var(--red));color:var(--white);border:none;padding:12px 28px;font-size:13px;font-weight:800;
+  button.raceBtn{background:linear-gradient(180deg,#e5333a,var(--red));color:var(--white);border:none;padding:12px 28px;font-size:13px;font-weight:800;
     letter-spacing:1.5px;text-transform:uppercase;border-radius:4px;cursor:pointer;box-shadow:0 3px 0 var(--red-dk);transition:transform .08s;}
   button.raceBtn:active{transform:translateY(3px);box-shadow:0 0 0 var(--red-dk);}
   button.raceBtn:disabled{opacity:.5;cursor:default;}
@@ -49,8 +49,8 @@
   .weekBadge strong{color:var(--gold);font-size:14px;}
 
   .lights{display:flex;justify-content:center;gap:9px;margin-bottom:16px;height:16px;}
-  .lights span{width:14px;height:14px;border-radius:50%;background:#241238;transition:background .12s, box-shadow .12s;}
-  .lights span.on{background:var(--red);box-shadow:0 0 16px 4px rgba(132,64,216,.8);}
+  .lights span{width:14px;height:14px;border-radius:50%;background:#3a1214;transition:background .12s, box-shadow .12s;}
+  .lights span.on{background:var(--red);box-shadow:0 0 16px 4px rgba(216,31,38,.8);}
 
   .race-area{display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap;}
   .track-wrap{flex:1 1 800px;position:relative;background:#000;border:1px solid var(--rail);border-radius:16px;
@@ -83,11 +83,11 @@
     display:flex;align-items:center;gap:8px;}
   .leaderboard h3::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--red);box-shadow:0 0 8px var(--red);}
   #lbList{display:flex;flex-direction:column;}
-  .lb-row{display:flex;align-items:center;gap:8px;padding:6px 4px;border-bottom:1px solid var(--rail);transition:transform .35s ease;}
+  .lb-row{display:flex;align-items:center;gap:10px;padding:10px 4px;border-bottom:1px solid var(--rail);transition:transform .35s ease;}
   .lb-row:last-child{border-bottom:none;}
   .lb-pos{width:20px;font-weight:800;font-size:13px;color:var(--gray-dim);}
   .lb-dot{width:11px;height:11px;border-radius:3px;flex-shrink:0;}
-  .lb-name{flex:1;font-size:11.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .lb-name{flex:1;font-size:12.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
   .lb-bar{width:60px;height:4px;background:#ffffff14;border-radius:2px;overflow:hidden;}
   .lb-bar i{display:block;height:100%;border-radius:2px;}
   .barBadge{display:inline-block;background:linear-gradient(180deg,#f2cf6b,#c9982a);color:#241a04;font-style:normal;
@@ -176,7 +176,7 @@
 <div class="page">
 
   <header>
-    <div class="ribbon">TEAM GARDEN CITY</div>
+    <div class="ribbon">TEAM METRO</div>
     <div class="brand">RAYMOUR &amp; FLANIGAN <span>FURNITURE | MATTRESSES</span></div>
     <h1>RAYTONA<span class="num"> 500</span></h1>
     <div class="flagline"><span class="flag"></span><span class="tag">The Great Mattress Race</span><span class="flag"></span></div>
@@ -254,36 +254,16 @@
    2. Replace each driver's "bedding" (and "sweep") with that week's numbers.
    Keep the same colors so cars stay recognizable week to week.
    ========================================================================= */
-const WEEK_NUMBER = 5;
+const WEEK_NUMBER = 6;
 
 const drivers = [
-  { name:"Szuyuan Chang", code:"SC2C", bedding:111445.06, sweep:"1 Entry Earned", bar:"BAR III", color:"#ce2121" },
-  { name:"Anthony Palazzo", code:"AP3", bedding:59643.15, sweep:"1 Entry Earned", bar:"BAR I", color:"#2cdc5f" },
-  { name:"Pamela Walker", code:"PW9", bedding:52604.98, sweep:"$3,999.00", bar:"BAR I", color:"#9e42e0" },
-  { name:"Stephan Marius", code:"SM2E", bedding:45390.23, sweep:"$4,099.00", bar:"BAR I", color:"#2cbfdc" },
-  { name:"Abdul Rehman", code:"NNA2", bedding:43857.91, sweep:null, bar:"BAR I", color:"#4cce21" },
-  { name:"Frank Land", code:"FJL2", bedding:39837.6, sweep:null, bar:null, color:"#ceb821" },
-  { name:"Michelle Napoli", code:"MLN1", bedding:38421.46, sweep:null, bar:null, color:"#e04297" },
-  { name:"Nick Yaraghchi", code:"NY3", bedding:34924.31, sweep:"$3,899.00", bar:null, color:"#332cdc" },
-  { name:"Fatma Dhirani", code:"FMD2", bedding:34899.07, sweep:null, bar:null, color:"#21ce8d" },
-  { name:"Erick Hall", code:"EAH6", bedding:34276.57, sweep:null, bar:null, color:"#6221ce" },
-  { name:"Sharon Praylow", code:"SP17", bedding:34274.64, sweep:"$5,948.50", bar:null, color:"#e07742" },
-  { name:"Linda Salerno", code:"LS1", bedding:32093.6, sweep:null, bar:null, color:"#bfe042" },
-  { name:"Saahir Pasha", code:"SKP1", bedding:30246.37, sweep:null, bar:null, color:"#ce2cdc" },
-  { name:"Shakeela Said", code:"SS2S", bedding:27705.6, sweep:null, bar:null, color:"#dc2c50" },
-  { name:"Ariel Torres", code:"AGT1", bedding:23114.19, sweep:"$1,949.50", bar:null, color:"#2177ce" },
-  { name:"Jason Mantia", code:"JAM1O", bedding:22259.57, sweep:"$5,813.00", bar:null, color:"#dca22c" },
-  { name:"Jing Li", code:"JL1Q", bedding:20349.48, sweep:null, bar:null, color:"#42e04f" },
-  { name:"Lincoln Griffith", code:"LGE", bedding:19270.72, sweep:"$1,614.50", bar:null, color:"#42e0da" },
-  { name:"Faith Wyckoff", code:"FW5", bedding:17975.85, sweep:"$2,899.00", bar:null, color:"#ce21a2" },
-  { name:"Karen Budhan-Ali", code:"KSB2", bedding:15955.39, sweep:null, bar:null, color:"#7cdc2c" },
-  { name:"Imam Kazmi", code:"IK1", bedding:13862.49, sweep:"1 Entry Earned", bar:null, color:"#2cdc76" },
-  { name:"Joseph Moscon", code:"JM2H", bedding:13663.13, sweep:null, bar:null, color:"#425ce0" },
-  { name:"Francisco Saavedra", code:"FXS", bedding:10742.07, sweep:null, bar:null, color:"#ce3721" },
-  { name:"Diogenes Barzola", code:"DJB9", bedding:10464.55, sweep:null, bar:null, color:"#b242e0" },
-  { name:"Keith Lebowitz", code:"KSL1", bedding:4868.65, sweep:null, bar:null, color:"#2ca8dc" },
-  { name:"Michael Farrier", code:"MPF4", bedding:2969.8, sweep:null, bar:null, color:"#cdce21" },
-  { name:"Harvey Lisman", code:"HJL2", bedding:2111.39, sweep:null, bar:null, color:"#e04283" },
+  { name:"Md Ferdousur Rahman", code:"MFR1", bedding:52734.58, sweep:"1 Entry Earned", bar:"BAR I", color:"#f2871d" },
+  { name:"Carolina Pulloni", code:"CFP", bedding:46505.65, sweep:"$2,049.00", bar:"BAR I", color:"#e0333a" },
+  { name:"Shah Almuktadir", code:"SAA6", bedding:42844.66, sweep:"1 Entry Earned", bar:"BAR I", color:"#8a4fd1" },
+  { name:"Xingchun Gao", code:"XG1", bedding:36659.52, sweep:null, bar:null, color:"#34a853" },
+  { name:"Yakov Medvedev", code:"YM3", bedding:34582.55, sweep:"$1,999.50", bar:null, color:"#2f6fe0" },
+  { name:"Victor Solis", code:"VMS1", bedding:32352.59, sweep:"$3,999.00", bar:null, color:"#d9a428" },
+  { name:"Jack Favia", code:"JJFB", bedding:18279.53, sweep:"$2,049.50", bar:null, color:"#1fb6b0" },
 ];
 
 const LAPS = 2;              // visual laps the cars circle during the run
@@ -393,7 +373,7 @@ let crowdDots = [];
   b.clip('evenodd');
   for(let th=0; th<Math.PI*2; th+=0.09){
     const seg = Math.floor(th/0.09);
-    b.fillStyle = seg%2? '#c8ccd4' : '#6a2fb5';
+    b.fillStyle = seg%2? '#c8ccd4' : '#c22026';
     const x = T.cx + (T.rx+120)*Math.cos(th);
     const y = T.cy + (T.ry+81)*Math.sin(th);
     b.beginPath(); b.arc(x,y,16,0,Math.PI*2); b.fill();
@@ -445,8 +425,8 @@ let crowdDots = [];
   // mowing stripes
   for(let y=T.cy-90;y<T.cy+90;y+=18){ b.fillStyle='rgba(255,255,255,0.03)'; b.fillRect(T.cx-T.rx,y,T.rx*2,9); }
   b.fillStyle='#1f4630';
-  b.font='900 34px Arial'; b.textAlign='center'; b.textBaseline='middle'; 
-  b.fillText('TEAM GARDEN CITY', T.cx, T.cy-12);
+  b.font='900 46px Arial'; b.textAlign='center'; b.textBaseline='middle'; 
+  b.fillText('TEAM METRO', T.cx, T.cy-12);
   b.font='800 20px Arial'; b.fillStyle='#2a5a3e';
   b.fillText('RAYTONA 500 · WEEK '+WEEK_NUMBER, T.cx, T.cy+24);
   b.restore();
@@ -475,7 +455,7 @@ let crowdDots = [];
 /* ---------- cars ---------- */
 const grid = [...drivers].map((d,i)=>({...d})).sort((a,b)=>b.bedding-a.bedding);
 const maxVal = grid[0].bedding;
-const laneOff = Array.from({length:drivers.length},(_,i)=> -34 + (i%9)*8.5); // packed lanes for a 27-car field
+const laneOff = [-30,-20,-10,0,10,20,30]; // radius offsets per car
 
 /* overtake wobble: unique per car, decays to zero by 80% of the race */
 const wob = grid.map((d,i)=>({
@@ -505,7 +485,7 @@ function spawnFirework(x,y,baseColor){
   const n=40;
   for(let i=0;i<n;i++){
     const a=rand(0,Math.PI*2), sp=rand(1.4,4.4);
-    sparks.push({x,y,vx:Math.cos(a)*sp,vy:Math.sin(a)*sp-1.2,life:1,color: Math.random()<0.5? baseColor : ['#e8b23d','#f4f2ee','#8440d8'][Math.floor(rand(0,3))]});
+    sparks.push({x,y,vx:Math.cos(a)*sp,vy:Math.sin(a)*sp-1.2,life:1,color: Math.random()<0.5? baseColor : ['#e8b23d','#f4f2ee','#d81f26'][Math.floor(rand(0,3))]});
   }
 }
 function spawnSmoke(x,y){
@@ -516,7 +496,7 @@ function drawCar(g, x, y, s, angle, color, number, nitro, speedFrac){
   ctx.save();
   ctx.translate(x,y);
   ctx.rotate(angle);
-  const L=36*s, W2=16*s;
+  const L=54*s, W2=24*s;
   // shadow
   ctx.fillStyle='rgba(0,0,0,0.42)';
   ctx.beginPath(); ctx.ellipse(0, 5*s, L*0.52, W2*0.5, 0,0,Math.PI*2); ctx.fill();
@@ -694,7 +674,7 @@ function resetRace(){
   resultsEl.classList.remove('show'); resultsBody.innerHTML=''; document.getElementById('podium').innerHTML='';
   hudTimer.textContent='0.0s'; hudSpeed.textContent='0';
   startBtn.disabled=false;
-  renderScene(grid.map((d,i)=> i*0.0022 ), 0, false); // staggered grid formation at the line
+  renderScene(grid.map((d,i)=> i*0.006 ), 0, false); // staggered grid formation at the line
 }
 
 function startRace(){
